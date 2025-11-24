@@ -1,8 +1,8 @@
-# Interactive Navigation Menu Task
+# Interactive Navigation Menu TaskV
 
 This project was created as part of my internship task at **SkillCraft Technology**.
 
-## Task Description
+## Task DescriptionV
 
 Create an interactive navigation menu that:
 - Is fixed and always visible on all pages
