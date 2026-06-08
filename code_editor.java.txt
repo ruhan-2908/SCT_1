@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.next();
+        Stack<Character> stack = new Stack<>();
+        for(char ch : input.toCharArray())
+        {
+            if(ch == ')' || ch == ']' || ch == '}')
+            {
+                if(stack.isEmpty()) 
+                {
+                    System.out.println(false);
+                    return ;
+                }
+                else if((ch == ')' && stack.peek() != '(') || 
+                (ch == ']' && stack.peek() != '[') || 
+                (ch == '}' && stack.peek() != '{'))
+                {
+                    System.out.println(false);
+                    return ;
+                }else
+                {
+                    stack.pop();
+                }
+                
+            }else
+            {
+                stack.push(ch);
+            }
+        }
+        if(stack.isEmpty())
+        {
+            System.out.println(true);
+            return ;
+        }else
+        {
+            System.out.println(false);
+        }
+    }
+}
